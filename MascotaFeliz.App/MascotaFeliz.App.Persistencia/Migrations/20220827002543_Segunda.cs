@@ -3,10 +3,29 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MascotaFeliz.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Segunda : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<string>(
+                name: "Correo",
+                table: "Personas",
+                type: "nvarchar(max)",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Discriminator",
+                table: "Personas",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "TarjetaProfesional",
+                table: "Personas",
+                type: "nvarchar(max)",
+                nullable: true);
+
             migrationBuilder.CreateTable(
                 name: "Historias",
                 columns: table => new
@@ -18,51 +37,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Historias", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Personas",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Personas", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "VisitasPyP",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaVisita = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Temperatura = table.Column<float>(type: "real", nullable: false),
-                    Peso = table.Column<float>(type: "real", nullable: false),
-                    FrecuenciaRespiratoria = table.Column<float>(type: "real", nullable: false),
-                    EstadoAnimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IdVetenario = table.Column<int>(type: "int", nullable: false),
-                    Recomendaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HistoriaId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_VisitasPyP", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_VisitasPyP_Historias_HistoriaId",
-                        column: x => x.HistoriaId,
-                        principalTable: "Historias",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -102,6 +76,33 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "VisitasPyP",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaVisita = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Temperatura = table.Column<float>(type: "real", nullable: false),
+                    Peso = table.Column<float>(type: "real", nullable: false),
+                    FrecuenciaRespiratoria = table.Column<float>(type: "real", nullable: false),
+                    FrecuenciaCardiaca = table.Column<float>(type: "real", nullable: false),
+                    EstadoAnimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdVeterinario = table.Column<int>(type: "int", nullable: false),
+                    Recomendaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HistoriaId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VisitasPyP", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VisitasPyP_Historias_HistoriaId",
+                        column: x => x.HistoriaId,
+                        principalTable: "Historias",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Mascotas_DuenoId",
                 table: "Mascotas",
@@ -132,10 +133,19 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                 name: "VisitasPyP");
 
             migrationBuilder.DropTable(
-                name: "Personas");
-
-            migrationBuilder.DropTable(
                 name: "Historias");
+
+            migrationBuilder.DropColumn(
+                name: "Correo",
+                table: "Personas");
+
+            migrationBuilder.DropColumn(
+                name: "Discriminator",
+                table: "Personas");
+
+            migrationBuilder.DropColumn(
+                name: "TarjetaProfesional",
+                table: "Personas");
         }
     }
 }

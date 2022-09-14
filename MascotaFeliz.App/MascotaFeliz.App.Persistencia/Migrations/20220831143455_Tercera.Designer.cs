@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MascotaFeliz.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220831225156_Inicial")]
-    partial class Inicial
+    [Migration("20220831143455_Tercera")]
+    partial class Tercera
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -118,13 +118,16 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<DateTime>("FechaVisita")
                         .HasColumnType("datetime2");
 
+                    b.Property<float>("FrecuenciaCardiaca")
+                        .HasColumnType("real");
+
                     b.Property<float>("FrecuenciaRespiratoria")
                         .HasColumnType("real");
 
                     b.Property<int?>("HistoriaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdVetenario")
+                    b.Property<int>("IdVeterinario")
                         .HasColumnType("int");
 
                     b.Property<float>("Peso")
