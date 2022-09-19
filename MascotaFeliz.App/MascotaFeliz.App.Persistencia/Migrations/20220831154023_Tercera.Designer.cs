@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MascotaFeliz.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220831143455_Tercera")]
+    [Migration("20220831154023_Tercera")]
     partial class Tercera
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

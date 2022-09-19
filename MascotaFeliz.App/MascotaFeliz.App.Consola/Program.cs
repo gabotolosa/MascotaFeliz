@@ -8,88 +8,87 @@ namespace MascotaFeliz.App.Consola
     class Program
     {
         private static IRepositorioDueno _repoDueno = new RepositorioDueno(new Persistencia.AppContext());
-        private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
-        //private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());
-        //private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
-       // private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
+        private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());        
+        private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());   
+        private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
+        private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello amigos vamos a empezar a definir las tablas");
+            Console.WriteLine("Hello World!");
             AddDueno();
-              //AddVeterinario();
-           // AddMascota();
-           //AddHistoria();  
-           //AddVisitaPyP();
-           //BuscarMascota(1);
-           //BuscarMascota();
-           // BuscarDueno(1);
+            //AddVeterinario();
+            //AddMascota();
+            //AddHistoria();
+            //AddVisitaPyP();
         }
+
         private static void AddDueno()
         {
             var dueno = new Dueno
             {
-                
-                Nombres = "Maria Paula",
-                Apellidos = "Engativa",
-                Direccion = "Sogamoso",
+                //Cedula = "1212",
+                Nombres = "Katherine",
+                Apellidos = "Vega",
+                Direccion = "calle 2a #10b 92",
                 Telefono = "1234567891",
-                Correo = "paula@gmail.com"
-            };
-            _repoDueno.AddDueno(dueno);
-
+                Correo = "Kathevega@gmail.com"
+                };
+                _repoDueno.AddDueno(dueno);
         }
-         private static void AddVeterinario()
+       
+  
+        private static void AddVeterinario()
         {
-            var veterinario= new Veterinario
+            var veterinario = new Veterinario
             {
-        
-            Nombres = "Nestor",
-            Apellidos = "Ortiz",
-            Direccion = "Carrera 25",
-            Telefono = "456222",
-            TarjetaProfesional = "8888888"
-            };
-            _repoVeterinario.AddVeterinario(veterinario);
-        }
-        /*
+                //Cedula = "1212",
+                Nombres = "Alexander",
+                Apellidos = "Torres",
+                Direccion = "Duitama",
+                Telefono = "31057555335",
+                TarjetaProfesional = "ac45689"
+                };
+                _repoVeterinario.AddVeterinario(veterinario);            
+        } 
+
         private static void AddMascota()
         {
             var mascota = new Mascota
             {
-                Nombre = "Fulgencio",
-                Color = "Gris",
-                Especie = "Perro",
-                Raza = "criollo"
-            };
-            _repoMascota.AddMascota(mascota);
-}*/
-/*
-        private static void AddHistoria()
+                //Cedula = "1212",
+                Nombre = "Horus",
+                Color = "cafe",
+                Especie = "canino",
+                Raza = "Golden",
+                };
+                _repoMascota.AddMascota(mascota);     
+        }
+
+         private static void AddHistoria()
         {
-            var Historia = new Historia
+            var historia = new Historia
             {
-                FechaInicial = new DateTime(1970, 1, 1)
+                
+                FechaInicial = new DateTime(2022, 09, 18)
+                
             };
-            _repoHistoria.AddHistoria(historia);
+            _repoHistoria.AddHistoria(historia);     
         }
-
-       
-
-*/
-        
-        private static void BuscarDueno(int idDueno)
+    
+        private static void AddVisitaPyP()
         {
-            var dueno = _repoDueno.GetDueno(idDueno);
-            Console.WriteLine(dueno.Nombres + "" + dueno.Apellidos + "" + dueno.Direccion + "" + dueno.Telefono);
-        }
-        private static void BuscarVeterinario(int idVeterinario)
-        {
-            var veterinario = _repoVeterinario.GetVeterinario (idVeterinario);
-        Console.WriteLine(veterinario.Nombres + "" + veterinario.Apellidos);
-
+            var visitaPyP = new VisitaPyP
+            {
+                FechaVisita = new DateTime (2022,09,16),
+                Temperatura = 35,
+                Peso = 10,
+                FrecuenciaRespiratoria = 28,
+                FrecuenciaCardiaca = 98,
+                EstadoAnimo = "Normal",
+                IdVeterinario = 123456,
+                Recomendaciones = "darle amor, comprension ternura"
+            };
+            _repoVisitaPyP.AddVisitaPyP(visitaPyP);
         }
     }
 }
-
-        
-    

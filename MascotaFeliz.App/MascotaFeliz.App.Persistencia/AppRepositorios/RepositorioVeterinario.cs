@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MascotaFeliz.App.Persistencia
 {
+
     public class RepositorioVeterinario : IRepositorioVeterinario
     {
         /// <summary>
@@ -17,17 +18,18 @@ namespace MascotaFeliz.App.Persistencia
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
-        
         public RepositorioVeterinario(AppContext appContext)
         {
             _appContext = appContext;
         }
 
-        public Veterinario AddVeterinario(Veterinario veterinario )
+
+        public Veterinario AddVeterinario(Veterinario veterinario)
         {
             var veterinarioAdicionado = _appContext.Veterinarios.Add(veterinario);
             _appContext.SaveChanges();
             return veterinarioAdicionado.Entity;
+
         }
 
         public void DeleteVeterinario(int idVeterinario)
@@ -43,7 +45,6 @@ namespace MascotaFeliz.App.Persistencia
         {
             return GetAllVeterinarios_();
         }
-
         public IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro)
         {
             var veterinarios = GetAllVeterinarios(); // Obtiene todos los saludos
@@ -53,8 +54,10 @@ namespace MascotaFeliz.App.Persistencia
                 {
                     veterinarios = veterinarios.Where(s => s.Nombres.Contains(filtro));
                 }
+
             }
             return veterinarios;
+
         }
 
         public IEnumerable<Veterinario> GetAllVeterinarios_()
@@ -72,15 +75,61 @@ namespace MascotaFeliz.App.Persistencia
             var veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(d => d.Id == veterinario.Id);
             if (veterinarioEncontrado != null)
             {
-                
                 veterinarioEncontrado.Nombres = veterinario.Nombres;
                 veterinarioEncontrado.Apellidos = veterinario.Apellidos;
                 veterinarioEncontrado.Direccion = veterinario.Direccion;
                 veterinarioEncontrado.Telefono = veterinario.Telefono;
-                 veterinarioEncontrado.TarjetaProfesional = veterinario.TarjetaProfesional;
+                veterinarioEncontrado.TarjetaProfesional = veterinario.TarjetaProfesional;
+                
+
+
+
+
+
+
                 _appContext.SaveChanges();
+
+
             }
             return veterinarioEncontrado;
-        }     
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+       
     }
 }
