@@ -12,9 +12,10 @@ namespace MascotaFeliz.App.Consola
         private static IRepositorioMascota _repoMascota = new RepositorioMascota(new Persistencia.AppContext());   
         private static IRepositorioHistoria _repoHistoria = new RepositorioHistoria(new Persistencia.AppContext());
         private static IRepositorioVisitaPyP _repoVisitaPyP = new RepositorioVisitaPyP(new Persistencia.AppContext());
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("se corrio correctamente el proyecto!");
             AddDueno();
             //AddVeterinario();
             //AddMascota();
