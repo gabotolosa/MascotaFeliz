@@ -3,11 +3,9 @@
 @{
 }
 
-
 <h1>hola</h1>
 <table class="table">
     <tr>
-    
         <th>TarjetaProfesional</th>
     </tr>
     @foreach (var veterinario in Model.listaVeterinarios)
@@ -22,7 +20,7 @@
                 </a>
             </td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinario" asp-route-veterinarioId="@veterinario.Id">
+                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
                     Editar Veterinario
                 </a>
             </td>
