@@ -6,12 +6,20 @@
 <h1>hola</h1>
 <table class="table">
     <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
         <th>TarjetaProfesional</th>
     </tr>
     @foreach (var veterinario in Model.listaVeterinarios)
     {
         <tr>
 
+            <td>@veterinario.Nombres</td>
+            <td>@veterinario.Apellidos</td>
+            <td>@veterinario.Direccion</td>
+            <td>@veterinario.Telefono</td>
             <td>@veterinario.TarjetaProfesional</td>
         
             <td>
@@ -28,3 +36,5 @@
         </tr>
     }
 </table>
+
+<a class = "btn btn-primary table-btn" asp-page="./EditarVeterinarios" class="btn-default">Adicionar Veterinario</a>
