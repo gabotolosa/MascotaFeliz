@@ -436,7 +436,6 @@ C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreap
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Login.cshtml.g.cs
-C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\DetallesMascota.cshtml.g.cs
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\EditarMascotas.cshtml.g.cs
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\ListaMascotas.cshtml.g.cs
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
@@ -456,3 +455,4 @@ C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreap
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\MascotaFaeliz.App.Frontend.dll
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\MascotaFaeliz.App.Frontend.pdb
 C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\MascotaFaeliz.App.Frontend.genruntimeconfig.cache
+C:\MascotaFeliz-1\MascotaFeliz.App\MascotaFeliz.App.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascotas\DetallesMascotas.cshtml.g.cs

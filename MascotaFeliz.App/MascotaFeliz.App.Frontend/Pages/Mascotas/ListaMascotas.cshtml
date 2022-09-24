@@ -4,10 +4,9 @@
 }
 
 
-<h1>hola</h1>
+<h1>Listado de Mascotas</h1>
 <table class="table">
     <tr>
-    
         <th>Nombre</th>
         <th>Color</th>
         <th>Especie</th>
@@ -16,12 +15,11 @@
     @foreach (var mascota in Model.listaMascotas)
     {
         <tr>
-
-            <td>@mascota.Nombre</td>
+            <td>@mascota.Nombre </td>
             <td>@mascota.Color</td>
             <td>@mascota.Especie</td>
             <td>@mascota.Raza</td>
-        
+                        
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesMascotas" asp-route-mascotaId="@mascota.Id">
                     Detalle Mascota
