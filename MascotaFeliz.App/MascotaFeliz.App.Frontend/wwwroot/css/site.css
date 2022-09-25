@@ -91,10 +91,11 @@ body{
   display: flex;
 }
 */
-/*body{
+body{
+  background-image: url("../img/background-bones.jpg");
+  background-size: cover;
+} 
 
-  background-image: url("/img/Fondo.jpg");
-}*/
 .main{
 
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
