@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MascotaFeliz.App.Persistencia
 {
-
     public class RepositorioMascota : IRepositorioMascota
     {
         /// <summary>
@@ -18,18 +17,17 @@ namespace MascotaFeliz.App.Persistencia
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
+       
         public RepositorioMascota(AppContext appContext)
         {
             _appContext = appContext;
         }
-
 
         public Mascota AddMascota(Mascota mascota)
         {
             var mascotaAdicionado = _appContext.Mascotas.Add(mascota);
             _appContext.SaveChanges();
             return mascotaAdicionado.Entity;
-
         }
 
         public void DeleteMascota(int idMascota)
@@ -45,6 +43,7 @@ namespace MascotaFeliz.App.Persistencia
         {
             return GetAllMascotas_();
         }
+
         public IEnumerable<Mascota> GetMascotasPorFiltro(string filtro)
         {
             var mascotas = GetAllMascotas(); // Obtiene todos los saludos
@@ -54,10 +53,8 @@ namespace MascotaFeliz.App.Persistencia
                 {
                     mascotas = mascotas.Where(s => s.Nombre.Contains(filtro));
                 }
-
             }
-            return mascotas;
-
+            return mascotas;        
         }
 
         public IEnumerable<Mascota> GetAllMascotas_()
