@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,8 +13,6 @@ namespace MascotaFeliz.App.Persistencia
         Veterinario UpdateVeterinario(Veterinario veterinario);
         void DeleteVeterinario(int idVeterinario);
         Veterinario GetVeterinario(int idVeterinario);
-
-
 
         IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro);
                 
