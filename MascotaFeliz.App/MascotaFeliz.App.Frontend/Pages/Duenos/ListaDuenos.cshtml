@@ -2,16 +2,19 @@
 @model MascotaFeliz.App.Frontend.Pages.ListaDuenosModel
 @{
 }
-<section class="main">
+
 <h1>hola</h1>
 <table class="table">
     <tr>
     
         <th>Nombres</th>
         <th>Apellidos</th>
-        <th>Direccion</th>
-        <th>Telefono</th>
-        <th>Correo</th>
+        <th>Detalles<th>
+        <th>Editar</th>
+        <th>Modificar</th>
+         <th>Eliminar</th>
+
+
     </tr>
     @foreach (var dueno in Model.listaDuenos)
     {
@@ -19,18 +22,17 @@
 
             <td>@dueno.Nombres</td>
             <td>@dueno.Apellidos</td>
-            <td>@dueno.Direccion</td>
-            <td>@dueno.Telefono</td>
-            <td>@dueno.Correo</td>
         
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">
-                    Detalles Dueño
+                    
+                    <i class="fa-solid fa-eye ms-1"></i>
                 </a>
             </td>
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./EditarDuenos" img src="./img/btnbuscar" asp-route-duenoId="@dueno.Id">
-                    Editar Dueño
+
+                    <i class="fa-solid fa-pencil ms-1"></i>
                 </a>
             </td>
         </tr>
@@ -38,3 +40,4 @@
 </table>
 
 <a class = "btn btn-primary table-btn" asp-page="./EditarDuenos" class="btn-default">Adicionar Dueño</a>
+

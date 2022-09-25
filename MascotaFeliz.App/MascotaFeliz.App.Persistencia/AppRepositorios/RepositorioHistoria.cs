@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MascotaFeliz.App.Persistencia
 {
-
-    public class RepositorioHistoria : IRepositorioHistoria
+   public class RepositorioHistoria : IRepositorioHistoria
     {
         /// <summary>
         /// Referencia al contexto de Dueno
@@ -29,9 +29,7 @@ namespace MascotaFeliz.App.Persistencia
             var historiaAdicionado = _appContext.Historias.Add(historia);
             _appContext.SaveChanges();
             return historiaAdicionado.Entity;
-
-        }
-
+ }
         public void DeleteHistoria(int idHistoria)
         {
             var historiaEncontrado = _appContext.Historias.FirstOrDefault(d => d.Id == idHistoria);
@@ -43,19 +41,25 @@ namespace MascotaFeliz.App.Persistencia
 
        public IEnumerable<Historia> GetAllHistorias()
         {
-            return GetAllHistorias_();
-        }
-        
-
-        public IEnumerable<Historia> GetAllHistorias_()
-        {
             return _appContext.Historias;
-        }
+    /*    }
+    IEnumerable<VisitaPyP> IRepositorioHistoria.GetVisitasHistoria(int idHistoria)
+    {
+        var historia = _appContext.Historias.Where(h => h.Id == idHistoria)
+                                            .Include(h => h.VisitasPyP)
+                                            .FirstOrDefault();
 
+                            return historia.VisitaPyP;*/
+    }
+                                  
         public Historia GetHistoria(int idHistoria)
         {
             return _appContext.Historias.Include(a => a.VisitasPyP).FirstOrDefault(d => d.Id == idHistoria);
         }
+
+
+       
+        
 
         public Historia UpdateHistoria(Historia historia)
         {
@@ -71,41 +75,6 @@ namespace MascotaFeliz.App.Persistencia
             }
             return historiaEncontrado;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         
        
