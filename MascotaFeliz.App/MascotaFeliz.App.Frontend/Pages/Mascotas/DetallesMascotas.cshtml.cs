@@ -7,17 +7,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using MascotaFeliz.App.Dominio;
 using MascotaFeliz.App.Persistencia;
 
-namespace Mascotafeliz.App.Frontend.Pages
+namespace MascotaFeliz.App.Frontend.Pages
 {
     public class DetallesMascotasModel : PageModel
- {
+    {
         private readonly IRepositorioMascota _repoMascota;
         public Mascota mascota {get;set;}
-        
+
         public DetallesMascotasModel()
         {
-            this._repoMascota = new RepositorioMascota(new Persistencia.AppContext());
+            this._repoMascota = new RepositorioMascota (new Persistencia.AppContext ());
         }
+
         public IActionResult OnGet(int mascotaId)
         {
             mascota = _repoMascota.GetMascota(mascotaId);

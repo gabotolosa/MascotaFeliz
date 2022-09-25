@@ -19,5 +19,16 @@
 <div>
     Especie: @Model.mascota.Especie
 </div>
-
-<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas </a>
+<div>
+    Especie: @Model.mascota.Especie
+</div>
+<div>
+    Nombre del dueño: @Model.mascota.Dueno.Nombres
+</div>
+<div>
+    Apellido del dueño: @Model.mascota.Dueno.Apellidos
+</div>
+<div>
+    Nombre del Veterinario: @Model.mascota.Veterinario.Nombres
+</div>
+<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas</a>
