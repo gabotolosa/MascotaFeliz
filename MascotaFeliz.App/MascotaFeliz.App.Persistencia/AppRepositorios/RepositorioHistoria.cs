@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace MascotaFeliz.App.Persistencia
         {
             _appContext = appContext;
         }
+
 
         public Historia AddHistoria(Historia historia)
         {
@@ -55,6 +57,10 @@ namespace MascotaFeliz.App.Persistencia
             return _appContext.Historias.Include(a => a.VisitasPyP).FirstOrDefault(d => d.Id == idHistoria);
         }
 
+
+       
+        
+
         public Historia UpdateHistoria(Historia historia)
         {
             var historiaEncontrado = _appContext.Historias.FirstOrDefault(d => d.Id == historia.Id);
@@ -69,6 +75,8 @@ namespace MascotaFeliz.App.Persistencia
             }
             return historiaEncontrado;
         }
+
+        
        
     }
 }

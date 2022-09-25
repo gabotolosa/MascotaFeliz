@@ -40,7 +40,7 @@ namespace MascotaFeliz.App.Consola
 
             //AddHistoria();
             //AsignarVisitaPyP(2);
-            ListarMascotas();
+            //ListarMascotas();
 
         }
 
@@ -96,26 +96,28 @@ namespace MascotaFeliz.App.Consola
             };
             _repoHistoria.AddHistoria(historia);
         }
-        
-        private static void AsignarVisitaPyP(int idHistoria)
+
+       /* private static void AsignarVisitaPyP(int idHistoria)
         {
             var historia = _repoHistoria.GetHistoria(idHistoria);
             if (historia != null)
             {
                 if (historia.VisitasPyP != null)
                 {
-                    historia.VisitasPyP.Add(new VisitaPyP { FechaVisita = new DateTime(1000, 09, 21), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", Recomendaciones = "Dieta extrema"});
+                    historia.VisitasPyP.Add(new VisitaPyP { FechaVisita = new DateTime(1000, 09, 21), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", //CedulaVeterinario = "123", 
+                    Recomendaciones = "Dieta extrema"});
                 }
                 else
                 {
                     historia.VisitasPyP = new List<VisitaPyP>{
-                        new VisitaPyP{FechaVisita = new DateTime(2000, 01, 01), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", Recomendaciones = "Dieta extrema" }
+                        new VisitaPyP{FechaVisita = new DateTime(2000, 01, 01), Temperatura = 38.0F, Peso = 30.0F, FrecuenciaRespiratoria = 71.0F, FrecuenciaCardiaca = 71.0F, EstadoAnimo = "Muy cansón", //CedulaVeterinario = "123", 
+                        Recomendaciones = "Dieta extrema" }
                     };
                 }
                 _repoHistoria.UpdateHistoria(historia);
             }
-        }
-        
+        }*/
+
         private static void BuscarDueno(int idDueno)
         {
             var dueno = _repoDueno.GetDueno(idDueno);
