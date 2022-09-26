@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\milus\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\milus\\.nuget\\packages"
+=======
+      "C:\\Users\\kathe\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\kathe\\.nuget\\packages"
+>>>>>>> 60d719fce25dc27a10ec980d3d7113b799a948a6
     ]
   }
 }

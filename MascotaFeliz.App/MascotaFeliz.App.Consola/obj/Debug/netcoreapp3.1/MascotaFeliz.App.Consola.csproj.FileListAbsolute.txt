@@ -133,7 +133,6 @@ C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFe
 C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.dll
 C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.pdb
 C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\1\MascotaFeliz.App-1\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.exe
 C:\1\MascotaFeliz.App-1\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.deps.json
 C:\1\MascotaFeliz.App-1\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.runtimeconfig.json
@@ -339,10 +338,6 @@ C:\Users\milus\Downloads\Mascotas (1)\Mascotas\MascotaFeliz.App\MascotaFeliz.App
 C:\Users\milus\Downloads\Mascotas (1)\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.dll
 C:\Users\milus\Downloads\Mascotas (1)\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.pdb
 C:\Users\milus\Downloads\Mascotas (1)\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.genruntimeconfig.cache
-=======
-C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.csproj.AssemblyReference.cache
-C:\1\MascotaFeliz.App\MascotaFeliz.App.Consola\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.GeneratedMSBuildEditorConfig.editorconfig
->>>>>>> e30e1535399633a4b1ec9ee027d605ad1f283f82
 C:\fulgis\MascotaFeliz.App\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.exe
 C:\fulgis\MascotaFeliz.App\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.deps.json
 C:\fulgis\MascotaFeliz.App\MascotaFeliz.App.Consola\bin\Debug\netcoreapp3.1\MascotaFeliz.App.Consola.runtimeconfig.json
