@@ -45,7 +45,6 @@ namespace MascotaFeliz.App.Persistencia
         {
             return GetAllDuenos_();
         }
-        
         public IEnumerable<Dueno> GetDuenosPorFiltro(string filtro)
         {
             var duenos = GetAllDuenos(); // Obtiene todos los saludos
@@ -93,7 +92,42 @@ namespace MascotaFeliz.App.Persistencia
             return duenoEncontrado;
         }
 
-       
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
        
     }
 }
