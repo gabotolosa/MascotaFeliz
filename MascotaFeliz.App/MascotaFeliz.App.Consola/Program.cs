@@ -36,11 +36,13 @@ namespace MascotaFeliz.App.Consola
             
             //ListarMascotas();
             //ListarHistorias();
-            //AsignarDueno();
+            
 
             //AddHistoria();
             //AsignarVisitaPyP(2);
             //ListarMascotas();
+            //DeleteMascota();
+            //DeleteDueno();
 
         }
 
@@ -78,23 +80,24 @@ namespace MascotaFeliz.App.Consola
         {
             var mascota = new Mascota
             {
-                Nombre = "Ragnar",
-                Color = "Sable",
-                Especie = "Canino",
-                Raza = "Husky"
+                Nombre = "cachito",
+                Color = "blanco",
+                Especie = "Gatuno",
+                Raza = "Angora"
             };
             _repoMascota.AddMascota(mascota);
-
+            Console.WriteLine("mascota agregada");
         }
 
         private static void AddHistoria()
         {
             var historia = new Historia
             {
-                FechaInicial = new DateTime(2020, 01, 01)
+                FechaInicial = new DateTime(2020, 01, 03)
 
             };
             _repoHistoria.AddHistoria(historia);
+            Console.WriteLine("historia agregada");
         }
 
        /* private static void AsignarVisitaPyP(int idHistoria)
@@ -185,23 +188,41 @@ namespace MascotaFeliz.App.Consola
 
         }
 
-    /*   private static void AsignarVeterinario()
+        private static void DeleteMascota()
         {
-            var veterinario = _repoMascota.AsignarVeterinario(1, 2);
-            Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+            _repoMascota.DeleteMascota(1);
+            Console.WriteLine("mascota borrada");
+        }
+
+        private static void DeleteDueno(){
+            _repoDueno.DeleteDueno(2012);
+            Console.WriteLine("dueño borrado");
+        }
+
+        private static void DeleteVeterinario(){
+            _repoVeterinario.DeleteVeterinario(20);
+            Console.WriteLine("veterinario borrado");
         }
 
         private static void AsignarDueno()
         {
-            var dueno = _repoMascota.AsignarDueno(1, 4);
+            var dueno = _repoMascota.AsignarDueno(5018, 2011);
             Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
         }
 
-        private static void AsignarHistoria()
+        private static void AsignarVeterinario()
         {
-            var historia = _repoMascota.AsignarHistoria(1,1);
+            var veterinario = _repoMascota.AsignarVeterinario(5018, 6);
+            Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
         }
 
-        */
+
+        private static void AsignarHistoria()
+        {
+            var historia = _repoMascota.AsignarHistoria(5018,4);
+            Console.WriteLine("HIstoria agregada");
+        }
+
+
     }
 }

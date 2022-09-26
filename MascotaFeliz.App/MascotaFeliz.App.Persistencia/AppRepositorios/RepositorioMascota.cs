@@ -75,21 +75,6 @@ namespace MascotaFeliz.App.Persistencia
             return mascotas;
         }
 
-       /* public Veterinario AsignarVeterinario(int idMascota, int idVeterinario){
-            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.Id == idMascota);
-            if (mascotaEncontrado != null)
-            {
-                var veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(v => v.Id == idVeterinario);
-                if (veterinarioEncontrado != null)
-                {
-                    mascotaEncontrado.Veterinario = veterinarioEncontrado;
-                    _appContext.SaveChanges();
-                }
-                return veterinarioEncontrado;
-            }
-            return null;
-        }   
-
         public Dueno AsignarDueno(int idMascota, int idDueno){
             var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.Id == idMascota);
             if (mascotaEncontrado != null)
@@ -103,7 +88,25 @@ namespace MascotaFeliz.App.Persistencia
                 return duenoEncontrado;
             }
             return null;
-        }   
+        }
+
+        public Veterinario AsignarVeterinario(int idMascota, int idVeterinario){
+            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.Id == idMascota);
+            if (mascotaEncontrado != null)
+            {
+                var veterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(v => v.Id == idVeterinario);
+                if (veterinarioEncontrado != null)
+                {
+                    mascotaEncontrado.Veterinario = veterinarioEncontrado;
+                    _appContext.SaveChanges();
+                }
+                return veterinarioEncontrado;
+            }
+            return null;
+        } 
+
+
+           
 
         public Historia AsignarHistoria(int idMascota, int idHistoria){
             var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(m => m.Id == idMascota);
@@ -118,7 +121,7 @@ namespace MascotaFeliz.App.Persistencia
                 return historiaEncontrado;
             }
             return null;
-        }*/
+        }
 
     }
 }

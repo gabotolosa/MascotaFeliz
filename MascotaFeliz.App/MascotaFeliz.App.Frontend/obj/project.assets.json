@@ -5757,11 +5757,25 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\milus\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\kathe\\.nuget\\packages\\": {}
+>>>>>>> 60d719fce25dc27a10ec980d3d7113b799a948a6
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFaeliz.App.Frontend.csproj",
+      "projectName": "MascotaFaeliz.App.Frontend",
+      "projectPath": "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFaeliz.App.Frontend.csproj",
+      "packagesPath": "C:\\Users\\milus\\.nuget\\packages\\",
+      "outputPath": "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\milus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
       "projectUniqueName": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFaeliz.App.Frontend.csproj",
       "projectName": "MascotaFaeliz.App.Frontend",
       "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFaeliz.App.Frontend.csproj",
@@ -5770,6 +5784,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 60d719fce25dc27a10ec980d3d7113b799a948a6
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5780,11 +5795,19 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+<<<<<<< HEAD
+            "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Consola\\MascotaFeliz.App.Consola.csproj": {
+              "projectPath": "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Consola\\MascotaFeliz.App.Consola.csproj"
+            },
+            "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+              "projectPath": "C:\\fulgis\\MascotaFeliz\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+=======
             "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Consola\\MascotaFeliz.App.Consola.csproj": {
               "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Consola\\MascotaFeliz.App.Consola.csproj"
             },
             "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
               "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+>>>>>>> 60d719fce25dc27a10ec980d3d7113b799a948a6
             }
           }
         }

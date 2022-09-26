@@ -6,26 +6,28 @@
 <h1>hola</h1>
 <table class="table">
     <tr>
+        <th>Nombre</th>
         <th>TarjetaProfesional</th>
-         <th>Detalles<th>
+        <th>Detalles<th>
         <th>Editar</th>
         <th>Modificar</th>
-         <th>Eliminar</th>
+        <th>Eliminar</th>
     </tr>
     @foreach (var veterinario in Model.listaVeterinarios)
     {
         <tr>
-
+            <td> @veterinario.Nombres @veterinario.Apellidos </td>
+            
             <td>@veterinario.TarjetaProfesional</td>
         
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-veterinarioId="@veterinario.Id"><i class="fa-solid fa-eye ms-1"></i>
-                    
+                <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                <i class="fa-solid fa-eye ms-1"></i>
                 </a>
             </td>
             <td>
-                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id"><i class="fa-solid fa-pencil ms-1"></i>
-                    
+                <a class="btn table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                <i class="fa-solid fa-pencil ms-1"></i>  
                 </a>
             </td>
 
