@@ -37,6 +37,8 @@ namespace MascotaFeliz.App.Frontend.Pages
             if (mascotaId.HasValue)
             {
                 mascota = _repoMascota.GetMascota(mascotaId.Value);
+                //mascota = _repoMascota.AsignarDueno(duenoId.Value);
+                
             }
             else 
             {

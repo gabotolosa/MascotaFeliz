@@ -2,30 +2,56 @@
 @model MascotaFeliz.App.Frontend.Pages.ListaDuenosModel
 @{
 }
-
-<a class = "btn btn-primary table-btn" asp-page="./EditarDuenos" class="btn-default">Agregar Dueño</a>
-<table Id ='Tables' class="table" >
+<div class="contenedor">
+  <img src="../img/B.png" width="100px" heigth="200px"/>
+  <a class = "centrado" asp-page="./EditarDuenos" class="btn-default">Agregar</a>
+</div>
+<table class="table">
+  <thead>
     <tr>
-    
         <th>Nombres</th>
         <th>Apellidos</th>
-        <th>Detalles<th>
-        <th>Editar</th>
-        <th>Modificar</th>
-         <th>Eliminar</th>
-
-
+        <th>Acciones<th>
+        <!-- <th>Editar</th> -->
+        <!-- <th>Eliminar</th> -->
     </tr>
+  </thead>
+  <tbody>
+  @foreach (var dueno in Model.listaDuenos){
+    <tr>
+      <td>@dueno.Nombres</td>
+      <td>@dueno.Apellidos</td>
+      <td>
+        <a class="btn btn-primary" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">
+            <i class="fa-solid fa-eye ms-1"></i>
+        </a>
+        <a class="btn btn-warning mx-3" asp-page="./EditarDuenos" img src="./img/btnbuscar" asp-route-duenoId="@dueno.Id">
+            <i class="fa-solid fa-pencil ms-1"></i>
+        </a>
+        <!-- TODO:// Hacer metodo borrar-->
+        <a class="btn btn-danger" asp-page="./EditarDuenos" img src="./img/btnbuscar" asp-route-duenoId="@dueno.Id">
+            <i class="fa-solid fa-trash ms-1"></i>
+        </a>
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
+<!-- <table Id ='Tables' class="table" >
+    <thead>
+        <tr>
+
+        </tr>
+    </thead>
+    <tbody>
     @foreach (var dueno in Model.listaDuenos)
     {
         <tr>
-
             <td>@dueno.Nombres</td>
             <td>@dueno.Apellidos</td>
         
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">
-                    
                     <i class="fa-solid fa-eye ms-1"></i>
                 </a>
             </td>
@@ -37,7 +63,8 @@
             </td>
         </tr>
     }
-</table>
+    </tbody>
+</table> -->
 
 
 

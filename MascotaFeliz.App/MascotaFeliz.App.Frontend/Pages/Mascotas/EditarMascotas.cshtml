@@ -24,6 +24,7 @@
                 @foreach (var dueno in Model.listaDuenos)
                 {
                     <option value="@dueno.Id">@dueno.Nombres @dueno.Apellidos</option>
+                    
                 }
             </select>
             <label for="veterinario">Veterinario</label>
@@ -40,4 +41,4 @@
     </form>
 </div>
 
-<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas </a>
+<a asp-page="./ListaMascotas" class="btn-default" >Lista de Mascotas </a>
