@@ -3,15 +3,16 @@
 @{
 }
 
-<h1>hola</h1>
+<div class="contenedor">
+  <img src="../img/B.png" width="100px" heigth="200px"/>
+  <a class = "centrado" asp-page="./EditarVeterinarios" class="btn-default">Agregar</a>
+</div>
 <table class="table">
     <tr>
         <th>Nombre</th>
         <th>TarjetaProfesional</th>
-        <th>Detalles<th>
-        <th>Editar</th>
-        <th>Modificar</th>
-        <th>Eliminar</th>
+        <th>Acciones</th>
+        
     </tr>
     @foreach (var veterinario in Model.listaVeterinarios)
     {
@@ -24,14 +25,14 @@
                 <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-veterinarioId="@veterinario.Id">
                 <i class="fa-solid fa-eye ms-1"></i>
                 </a>
-            </td>
-            <td>
-                <a class="btn table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                                <a class="btn btn-warning mx-3" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
                 <i class="fa-solid fa-pencil ms-1"></i>  
                 </a>
-            </td>
+                <a class="btn btn-danger" asp-page="./EditarVeterinario" img src="./img/btnbuscar" asp-route-duenoId="@veterinario.Id">
+            <i class="fa-solid fa-trash ms-1"></i>
+        </a>
+            </td> 
 
         </tr>
     }
 </table>
-<a class = "btn btn-primary table-btn" asp-page="./EditarVeterinarios" class="btn-default">Adicionar Veterinario</a>

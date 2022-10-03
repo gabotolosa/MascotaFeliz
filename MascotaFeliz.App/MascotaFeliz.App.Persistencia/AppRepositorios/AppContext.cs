@@ -17,7 +17,7 @@ namespace MascotaFeliz.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = MascotaFelizData");
+                .UseSqlServer("Data Source = MascolaFelizData.mssql.somee.com; Initial Catalog = MascolaFelizData; user id=Ktorres_SQLLogin_1; pwd=l4jvk99z5j");
             }
         }
     }

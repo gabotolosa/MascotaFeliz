@@ -5,6 +5,8 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  color: #6d055ffd;
+  font-style: oblique;
 }
 
 /* Provide sufficient contrast against white background */
@@ -92,9 +94,15 @@ body{
 }
 */
 body{
-  background-image: url("../img/background-bones.jpg");
+  background-color: black;
+  background-image: url("../img/huesito.png");
   background-size: cover;
 } 
+
+.body2{
+  background-color: black;
+  background-size: cover;
+}
 
 .main{
 
@@ -214,4 +222,8 @@ body{
 
 .menu li a:hover{
   background: #bd574e;
+}
+
+.navbar {
+background-color: #c20392;
 }
